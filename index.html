@@ -4,31 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Portfolio</title>
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
     <style>
       html {
         scroll-behavior: smooth;
       }
     </style>
   </head>
+
   <body class="font-sans text-gray-800">
     <!-- Navbar -->
     <nav class="bg-blue-600 text-white px-6 py-4 fixed top-0 left-0 w-full z-50 shadow-md">
       <div class="container mx-auto flex justify-between items-center">
-        <!-- Logo -->
         <a href="#home" class="text-2xl font-bold">Portfolio</a>
 
-        <!-- Menu button (mobile) -->
         <button id="menu-btn" class="md:hidden focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
 
-        <!-- Menu (desktop) -->
         <ul id="menu" class="hidden md:flex space-x-6">
           <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
           <li><a href="#about" class="hover:text-yellow-300">About</a></li>
@@ -38,7 +42,6 @@
         </ul>
       </div>
 
-      <!-- Menu (mobile) -->
       <div id="mobile-menu" class="hidden md:hidden bg-blue-700 px-6 py-4 space-y-2">
         <a href="#home" class="block hover:text-yellow-300">Home</a>
         <a href="#about" class="block hover:text-yellow-300">About</a>
@@ -59,22 +62,20 @@
     <section id="about" class="py-20 bg-white">
       <div class="container mx-auto text-center px-6" data-aos="fade-right">
         <h2 class="text-3xl font-bold mb-6 text-blue-700">About Me</h2>
+
         <p class="max-w-2xl mx-auto mb-6 text-justify">
-          Hello, I am Syahren Maulana Adil Hakim. I am an Informatics Engineering student at Universitas Airlangga, and a graduate of Telkom Malang Vocational School majoring in Software Engineering. I have a strong interest in Android App
-          Development, Web Development, and Digital Marketing. My background in software engineering has given me a solid foundation in programming and problem solving, while my current studies at Universitas Airlangga allow me to deepen my
-          knowledge in system design, data analysis, and modern technologies. During my learning journey, I have experienced various challenges, from adapting to new learning methods at university to collaborating in team projects with
-          diverse backgrounds. These experiences taught me how to manage time, communicate effectively, and be persistent in solving problems. Some of my proudest moments include successfully completing several academic projects, exploring
-          new frameworks, and actively participating in group assignments that strengthened both my technical and soft skills. Looking forward, my goal is to continuously improve my skills in mobile and web development, contribute to
-          impactful digital solutions, and prepare myself for professional opportunities in the tech industry. I also hope to combine my technical expertise with my passion for digital marketing to create innovative projects that can reach
-          and benefit more people.
+          I am an Informatics Engineering student at Universitas Airlangga with a strong interest in fullstack development. I have experience in frontend and mobile development using Flutter, HTML, CSS, and JavaScript, and I am also
+          familiar with backend development using Golang, Laravel, PHP, and Firebase.
+          <br /><br />
+          Through academic and project-based experiences, I have worked on real-world applications including mobile apps, web systems, and backend-integrated projects. These experiences strengthened my problem solving skills, understanding
+          of system workflows, and ability to collaborate effectively in a team environment.
+          <br /><br />
+          Currently, I am seeking an internship opportunity where I can contribute as a Frontend, Mobile, or Backend intern based on team needs, while continuing to grow professionally in the software development field.
         </p>
+
         <div class="flex justify-center gap-4">
           <a href="https://linkedin.com/in/syahren-maulana-adil-hakim-69b824239/" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-800">LinkedIn</a>
-          <a href="https://youtu.be/t9sGUsm2FOc?si=VrRbrkQfoXL_P92e" target="_blank" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-800">Intro Video</a>
         </div>
-        <!--<div class="mt-8">
-          <img src="about-photo.jpg" class="rounded-lg shadow-lg mx-auto w-80" alt="About Photo" />
-        </div>-->
       </div>
     </section>
 
@@ -89,66 +90,120 @@
     <!-- Projects -->
     <section id="projects" class="py-20 bg-white">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-12 text-blue-700" data-aos="fade-up">Projects / Works</h2>
+        <h2 class="text-3xl font-bold mb-6 text-blue-700" data-aos="fade-up">Projects / Works</h2>
+
+        <p class="text-gray-600 max-w-xl mx-auto mb-12">Selected projects showcasing my experience in frontend, mobile, and backend development. Source code and live demos are available.</p>
+
         <div class="grid md:grid-cols-3 gap-8">
-          <!-- Project 1 -->
+          <!-- Project -->
           <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
-            <img src="img/wikusama.png" alt="Project 1" class="w-full h-40 object-cover" />
+            <img src="img/wikusama.png" class="w-full h-40 object-cover" />
             <div class="p-4">
               <h3 class="text-xl font-semibold text-blue-700">Wikusama Hotel</h3>
-              <p class="text-sm mt-2 text-gray-600 text-justify">
-                The hotel booking website I used for my final exam at SMK Telkom Malang uses the native PHP programming language, which ultimately led to me obtaining a native PHP certification from DOT Indonesia.
-              </p>
-              <a href="https://github.com/nerhays/wikusamahotel" target="_blank" class="mt-3 inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-800">View More</a>
+              <p class="text-xs text-blue-600 font-medium mt-1">PHP • MySQL • HTML • CSS</p>
+              <p class="text-sm mt-2 text-gray-600 text-justify">Hotel booking website built using native PHP for final exam project, leading to a PHP certification from DOT Indonesia.</p>
+              <div class="flex gap-3 mt-4 justify-center">
+                <a href="https://github.com/nerhays/wikusamahotel" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
+              </div>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/daha.png" alt="Project 2" class="w-full h-40 object-cover" />
+          <!-- Project -->
+          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+            <img src="img/librahub.jpeg" class="w-full h-40 object-cover" />
             <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">Daha Borepile Landing Page</h3>
-              <p class="text-sm mt-2 text-gray-600 text-justify">website landing page company profile daha borepile.</p>
-              <a href="https://nerhays.github.io/daha-web-v2/" class="mt-3 inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-800">View More</a>
+              <h3 class="text-xl font-semibold text-blue-700">LibraHub</h3>
+              <p class="text-xs text-blue-600 font-medium mt-1">Flutter • Firebase • Mobile App</p>
+              <p class="text-sm mt-2 text-gray-600 text-justify">Library management mobile application with authentication and real-time database integration.</p>
+              <div class="flex gap-3 mt-4 justify-center">
+                <a href="https://github.com/nerhays/LibraHub" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
+              </div>
             </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/litera.png" alt="Project 3" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">Litera</h3>
-              <p class="text-sm mt-2 text-gray-600 text-justify">Online book shopping website based on html, css, js with dummy data in js.</p>
-              <a href="https://litera-belanjabukuonline.vercel.app/" class="mt-3 inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-800">View More</a>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/librahub.jpeg" alt="Project 3" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">Librahub</h3>
-              <p class="text-sm mt-2 text-gray-600 text-justify">Library Application using Flutter and Firebase as a database.</p>
-              <a href="https://github.com/nerhays/LibraHub" class="mt-3 inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-800">View More</a>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/tokoroti.jpeg" alt="Project 3" class="w-full h-40 object-cover" />
+          <!-- Project -->
+          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+            <img src="img/tokoroti.jpeg" class="w-full h-40 object-cover" />
             <div class="p-4">
               <h3 class="text-xl font-semibold text-blue-700">TokoRoti</h3>
-              <p class="text-sm mt-2 text-gray-600 text-justify">
-                Bread sales application with flutter and firebase as database, and using geolocate for delivery location which I used to get junior mobile programmer certificate from BNSP.
-              </p>
-              <a href="https://github.com/nerhays/TokoRoti" class="mt-3 inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-800">View More</a>
+              <p class="text-xs text-blue-600 font-medium mt-1">Flutter • Firebase • Geolocation</p>
+              <p class="text-sm mt-2 text-gray-600 text-justify">Bread ordering mobile app with location-based delivery, used for Junior Mobile Programmer certification (BNSP).</p>
+              <div class="flex gap-3 mt-4 justify-center">
+                <a href="https://github.com/nerhays/TokoRoti" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <img src="img/daha.png" alt="Daha Borepile" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold text-blue-700">Daha Borepile Landing Page</h3>
+
+              <p class="text-xs text-blue-600 font-medium mt-1">HTML • CSS • JavaScript • Responsive Design</p>
+
+              <p class="text-sm mt-2 text-gray-600 text-justify">Company profile landing page built to showcase services and projects of Daha Borepile. Designed with responsive layout and clean UI for better user experience.</p>
+
+              <div class="flex gap-3 mt-4 justify-center">
+                <a href="https://nerhays.github.io/daha-web-v2/" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-800"> <i class="fas fa-globe"></i> Demo </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+            <img src="img/litera.png" alt="Litera" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold text-blue-700">Litera</h3>
+
+              <p class="text-xs text-blue-600 font-medium mt-1">HTML • CSS • JavaScript</p>
+
+              <p class="text-sm mt-2 text-gray-600 text-justify">Online book shopping website built using vanilla HTML, CSS, and JavaScript with dummy data managed through JavaScript objects.</p>
+
+              <div class="flex gap-3 mt-4 justify-center">
+                <a href="https://litera-belanjabukuonline.vercel.app/" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-800"> <i class="fas fa-globe"></i> Demo </a>
+              </div>
             </div>
           </div>
 
           <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/laravel.png" alt="Project 3" class="w-full h-40 object-cover" />
+            <img src="img/laravel.png" alt="Perpustakaan Laravel" class="w-full h-40 object-cover" />
             <div class="p-4">
               <h3 class="text-xl font-semibold text-blue-700">Perpustakaan Laravel</h3>
-              <p class="text-sm mt-2 text-gray-600 text-justify">web crud library with the laravel framework.</p>
-              <a href="https://github.com/nerhays/perpustakaanlaravel" class="mt-3 inline-block px-3 py-1 bg-blue-600 text-white rounded hover:bg-blue-800">View More</a>
+
+              <p class="text-xs text-blue-600 font-medium mt-1">Laravel • PHP • MySQL • CRUD</p>
+
+              <p class="text-sm mt-2 text-gray-600 text-justify">Web-based library management system implementing CRUD operations using Laravel framework and MySQL database.</p>
+
+              <div class="flex gap-3 mt-4 justify-center">
+                <a href="https://github.com/nerhays/perpustakaanlaravel" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+            <img src="img/crud_alumni_mongo.png" alt="CRUD Alumni MongoDB" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold text-blue-700">CRUD Alumni API (MongoDB)</h3>
+
+              <p class="text-xs text-blue-600 font-medium mt-1">Golang • MongoDB • REST API • Clean Architecture</p>
+
+              <p class="text-sm mt-2 text-gray-600 text-justify">
+                Backend REST API for alumni data management developed as part of a Backend Development course. Implemented CRUD operations using Golang and MongoDB, applying clean architecture and repository pattern.
+              </p>
+
+              <div class="flex gap-3 mt-4 justify-center">
+                <a href="https://github.com/nerhays/crud_alumni_mongodb" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
+              </div>
+            </div>
+          </div>
+          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+            <img src="img/crud_alumni-postgress.png" alt="CRUD Alumni PostgreSQL" class="w-full h-40 object-cover" />
+            <div class="p-4">
+              <h3 class="text-xl font-semibold text-blue-700">CRUD Alumni API (PostgreSQL)</h3>
+
+              <p class="text-xs text-blue-600 font-medium mt-1">Golang • PostgreSQL • REST API • SQL</p>
+
+              <p class="text-sm mt-2 text-gray-600 text-justify">Backend REST API project developed using Golang and PostgreSQL to manage alumni data. Focused on relational database design, SQL queries, and RESTful API implementation.</p>
+
+              <div class="flex gap-3 mt-4 justify-center">
+                <a href="https://github.com/nerhays/crud_alumni_postgressql" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
+              </div>
             </div>
           </div>
         </div>
@@ -159,22 +214,14 @@
     <footer class="bg-blue-700 text-white py-10">
       <div id="contact" class="container mx-auto px-6 text-center">
         <h2 class="text-2xl font-bold mb-6">Contact</h2>
-
-        <!-- Social Links -->
         <div class="flex justify-center space-x-10 mb-6">
-          <!-- GitHub -->
-          <a href="https://github.com/nerhays" target="_blank" class="flex flex-col items-center hover:text-gray-300 transition">
-            <i class="fab fa-github text-3xl mb-2"></i>
-            <span class="text-sm">GitHub</span>
+          <a href="https://github.com/nerhays" target="_blank">
+            <i class="fab fa-github text-3xl"></i>
           </a>
-
-          <!-- LinkedIn -->
-          <a href="https://linkedin.com/in/syahren-maulana-adil-hakim-69b824239/" target="_blank" class="flex flex-col items-center hover:text-gray-300 transition">
-            <i class="fab fa-linkedin text-3xl mb-2"></i>
-            <span class="text-sm">LinkedIn</span>
+          <a href="https://linkedin.com/in/syahren-maulana-adil-hakim-69b824239/" target="_blank">
+            <i class="fab fa-linkedin text-3xl"></i>
           </a>
         </div>
-
         <p class="text-sm">&copy; 2025 nrhys</p>
       </div>
     </footer>
@@ -187,7 +234,6 @@
     <script>
       const btn = document.getElementById("menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
-
       btn.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
