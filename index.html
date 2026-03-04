@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Tailwind -->
+    <title>Syahren Maulana | Fullstack & Mobile Developer</title>
+
+    <meta name="description" content="Portfolio of Syahren Maulana - Fullstack and Mobile Developer" />
+
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
@@ -22,220 +22,396 @@
   </head>
 
   <body class="font-sans text-gray-800">
-    <!-- Navbar -->
-    <nav class="bg-blue-600 text-white px-6 py-4 fixed top-0 left-0 w-full z-50 shadow-md">
-      <div class="container mx-auto flex justify-between items-center">
-        <a href="#home" class="text-2xl font-bold">Portfolio</a>
+    <nav class="bg-blue-600 text-white fixed w-full z-50 shadow-md">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-xl font-bold">Syahren</h1>
 
-        <button id="menu-btn" class="md:hidden focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-
-        <ul id="menu" class="hidden md:flex space-x-6">
+        <ul class="hidden md:flex space-x-6">
           <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
           <li><a href="#about" class="hover:text-yellow-300">About</a></li>
-          <li><a href="#resume" class="hover:text-yellow-300">Resume</a></li>
+          <li><a href="#skills" class="hover:text-yellow-300">Skills</a></li>
           <li><a href="#projects" class="hover:text-yellow-300">Projects</a></li>
+          <li><a href="#experience" class="hover:text-yellow-300">Experience</a></li>
           <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
         </ul>
       </div>
-
-      <div id="mobile-menu" class="hidden md:hidden bg-blue-700 px-6 py-4 space-y-2">
-        <a href="#home" class="block hover:text-yellow-300">Home</a>
-        <a href="#about" class="block hover:text-yellow-300">About</a>
-        <a href="#resume" class="block hover:text-yellow-300">Resume</a>
-        <a href="#projects" class="block hover:text-yellow-300">Projects</a>
-        <a href="#contact" class="block hover:text-yellow-300">Contact</a>
-      </div>
     </nav>
 
-    <!-- Home -->
     <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-blue-600 text-white">
-      <img src="img/fotoku.jpeg" alt="Profile" class="rounded-full w-40 h-40 border-4 border-white shadow-lg mb-6 animate-bounce" />
-      <h1 class="text-4xl font-bold" data-aos="fade-up">Hello, I'm Syahren</h1>
-      <p class="mt-4 text-lg italic" data-aos="fade-up" data-aos-delay="200">"Exploring, learning, and contributing through technology."</p>
+      <img src="img/fotoku.jpeg" class="w-40 h-40 rounded-full border-4 border-white shadow-lg mb-6" />
+
+      <h1 class="text-4xl md:text-5xl font-bold" data-aos="fade-up">Hi, I'm Syahren Maulana</h1>
+
+      <p class="mt-4 text-lg text-blue-100" data-aos="fade-up" data-aos-delay="200">Fullstack & Mobile Developer</p>
+
+      <p class="mt-3 max-w-xl text-blue-200">Informatics Engineering student at Universitas Airlangga with experience building web and mobile applications using Flutter, Golang, Laravel, and modern frontend technologies.</p>
+
+      <div class="flex gap-4 mt-6">
+        <a href="https://github.com/nerhays" class="bg-white text-blue-600 px-5 py-2 rounded-lg font-semibold hover:bg-gray-200"> GitHub </a>
+
+        <a href="#projects" class="border border-white px-5 py-2 rounded-lg hover:bg-blue-700"> View Projects </a>
+      </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="py-20 bg-white">
-      <div class="container mx-auto text-center px-6" data-aos="fade-right">
-        <h2 class="text-3xl font-bold mb-6 text-blue-700">About Me</h2>
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-blue-700 mb-6">About Me</h2>
 
-        <p class="max-w-2xl mx-auto mb-6 text-justify">
-          I am an Informatics Engineering student at Universitas Airlangga with a strong interest in fullstack development. I have experience in frontend and mobile development using Flutter, HTML, CSS, and JavaScript, and I am also
-          familiar with backend development using Golang, Laravel, PHP, and Firebase.
-          <br /><br />
-          Through academic and project-based experiences, I have worked on real-world applications including mobile apps, web systems, and backend-integrated projects. These experiences strengthened my problem solving skills, understanding
-          of system workflows, and ability to collaborate effectively in a team environment.
-          <br /><br />
-          Currently, I am seeking an internship opportunity where I can contribute as a Frontend, Mobile, or Backend intern based on team needs, while continuing to grow professionally in the software development field.
+        <p class="max-w-2xl mx-auto text-gray-600 text-justify">
+          I am an Informatics Engineering student at Universitas Airlangga with strong interest in fullstack and mobile application development. I have experience developing web and mobile applications using Flutter, HTML, CSS, JavaScript,
+          Laravel, Golang, React Vite, and Firebase. Through academic and personal projects, I have built systems such as mobile applications, REST APIs, and responsive web platforms. These experiences strengthened my problem solving
+          skills, system design understanding, and teamwork collaboration. Currently I am seeking internship opportunities as a Fullstack Developer, Mobile Developer, or Backend Developer where I can contribute to real-world software
+          development projects.
         </p>
+      </div>
+    </section>
 
-        <div class="flex justify-center gap-4">
-          <a href="https://linkedin.com/in/syahren-maulana-adil-hakim-69b824239/" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-800">LinkedIn</a>
+    <section id="skills" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-blue-700 mb-10">Tech Stack</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i>
+            <p class="font-semibold">HTML</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-css3-alt text-3xl text-blue-500 mb-2"></i>
+            <p class="font-semibold">CSS</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-js text-3xl text-yellow-500 mb-2"></i>
+            <p class="font-semibold">JavaScript</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-react text-3xl text-cyan-500 mb-2"></i>
+            <p class="font-semibold">React + Vite</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-wind text-3xl text-sky-500 mb-2"></i>
+            <p class="font-semibold">Tailwind CSS</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-php text-3xl text-indigo-500 mb-2"></i>
+            <p class="font-semibold">PHP Native</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-laravel text-3xl text-red-500 mb-2"></i>
+            <p class="font-semibold">Laravel</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-server text-3xl text-gray-700 mb-2"></i>
+            <p class="font-semibold">Golang</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-mobile-alt text-3xl text-blue-500 mb-2"></i>
+            <p class="font-semibold">Flutter</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-code text-3xl text-purple-600 mb-2"></i>
+            <p class="font-semibold">Kotlin</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-database text-3xl text-blue-600 mb-2"></i>
+            <p class="font-semibold">MySQL</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-database text-3xl text-indigo-600 mb-2"></i>
+            <p class="font-semibold">PostgreSQL</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-leaf text-3xl text-green-600 mb-2"></i>
+            <p class="font-semibold">MongoDB</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-fire text-3xl text-orange-500 mb-2"></i>
+            <p class="font-semibold">Firebase</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-git-alt text-3xl text-red-600 mb-2"></i>
+            <p class="font-semibold">Git</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-github text-3xl text-black mb-2"></i>
+            <p class="font-semibold">GitHub</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Resume -->
-    <section id="resume" class="py-20 bg-blue-50 text-center">
-      <div class="container mx-auto px-6" data-aos="zoom-in">
-        <h2 class="text-3xl font-bold mb-6 text-blue-700">Resume / CV</h2>
-        <embed src="img/cv.pdf" type="application/pdf" width="100%" height="600px" class="rounded-lg shadow-lg" />
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="py-20 bg-white">
+    <section id="projects" class="py-20">
       <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6 text-blue-700" data-aos="fade-up">Projects / Works</h2>
-
-        <p class="text-gray-600 max-w-xl mx-auto mb-12">Selected projects showcasing my experience in frontend, mobile, and backend development. Source code and live demos are available.</p>
+        <h2 class="text-3xl font-bold text-blue-700 mb-10">Projects</h2>
 
         <div class="grid md:grid-cols-3 gap-8">
-          <!-- Project -->
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
-            <img src="img/wikusama.png" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">Wikusama Hotel</h3>
-              <p class="text-xs text-blue-600 font-medium mt-1">PHP • MySQL • HTML • CSS</p>
-              <p class="text-sm mt-2 text-gray-600 text-justify">Hotel booking website built using native PHP for final exam project, leading to a PHP certification from DOT Indonesia.</p>
-              <div class="flex gap-3 mt-4 justify-center">
-                <a href="https://github.com/nerhays/wikusamahotel" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
-              </div>
-            </div>
-          </div>
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/pintra.png" class="w-full h-40 object-cover" />
 
-          <!-- Project -->
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
-            <img src="img/librahub.jpeg" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">LibraHub</h3>
-              <p class="text-xs text-blue-600 font-medium mt-1">Flutter • Firebase • Mobile App</p>
-              <p class="text-sm mt-2 text-gray-600 text-justify">Library management mobile application with authentication and real-time database integration.</p>
-              <div class="flex gap-3 mt-4 justify-center">
-                <a href="https://github.com/nerhays/LibraHub" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
-              </div>
-            </div>
-          </div>
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">PINTRA (Pelindo Internal Loan System)</h3>
 
-          <!-- Project -->
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
-            <img src="img/tokoroti.jpeg" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">TokoRoti</h3>
-              <p class="text-xs text-blue-600 font-medium mt-1">Flutter • Firebase • Geolocation</p>
-              <p class="text-sm mt-2 text-gray-600 text-justify">Bread ordering mobile app with location-based delivery, used for Junior Mobile Programmer certification (BNSP).</p>
-              <div class="flex gap-3 mt-4 justify-center">
-                <a href="https://github.com/nerhays/TokoRoti" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
-              </div>
-            </div>
-          </div>
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/daha.png" alt="Daha Borepile" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">Daha Borepile Landing Page</h3>
+              <p class="text-xs text-blue-600 mt-1">React • Vite • Google Apps Script • Internal System</p>
 
-              <p class="text-xs text-blue-600 font-medium mt-1">HTML • CSS • JavaScript • Responsive Design</p>
-
-              <p class="text-sm mt-2 text-gray-600 text-justify">Company profile landing page built to showcase services and projects of Daha Borepile. Designed with responsive layout and clean UI for better user experience.</p>
-
-              <div class="flex gap-3 mt-4 justify-center">
-                <a href="https://nerhays.github.io/daha-web-v2/" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-800"> <i class="fas fa-globe"></i> Demo </a>
-              </div>
-            </div>
-          </div>
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/litera.png" alt="Litera" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">Litera</h3>
-
-              <p class="text-xs text-blue-600 font-medium mt-1">HTML • CSS • JavaScript</p>
-
-              <p class="text-sm mt-2 text-gray-600 text-justify">Online book shopping website built using vanilla HTML, CSS, and JavaScript with dummy data managed through JavaScript objects.</p>
-
-              <div class="flex gap-3 mt-4 justify-center">
-                <a href="https://litera-belanjabukuonline.vercel.app/" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-800"> <i class="fas fa-globe"></i> Demo </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/laravel.png" alt="Perpustakaan Laravel" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">Perpustakaan Laravel</h3>
-
-              <p class="text-xs text-blue-600 font-medium mt-1">Laravel • PHP • MySQL • CRUD</p>
-
-              <p class="text-sm mt-2 text-gray-600 text-justify">Web-based library management system implementing CRUD operations using Laravel framework and MySQL database.</p>
-
-              <div class="flex gap-3 mt-4 justify-center">
-                <a href="https://github.com/nerhays/perpustakaanlaravel" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
-              </div>
-            </div>
-          </div>
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
-            <img src="img/crud_alumni_mongo.png" alt="CRUD Alumni MongoDB" class="w-full h-40 object-cover" />
-            <div class="p-4">
-              <h3 class="text-xl font-semibold text-blue-700">CRUD Alumni API (MongoDB)</h3>
-
-              <p class="text-xs text-blue-600 font-medium mt-1">Golang • MongoDB • REST API • Clean Architecture</p>
-
-              <p class="text-sm mt-2 text-gray-600 text-justify">
-                Backend REST API for alumni data management developed as part of a Backend Development course. Implemented CRUD operations using Golang and MongoDB, applying clean architecture and repository pattern.
+              <p class="text-sm mt-3 text-gray-600">
+                Internal web application developed during internship at Pelindo to manage employee loan requests and approval workflows. Built using React and Vite with integration to Google Apps Script API for backend processing and
+                internal data management.
               </p>
 
-              <div class="flex gap-3 mt-4 justify-center">
-                <a href="https://github.com/nerhays/crud_alumni_mongodb" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
-              </div>
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Employee loan request management</li>
+                <li>Approval workflow system</li>
+                <li>Integration with Google Apps Script API</li>
+              </ul>
             </div>
           </div>
-          <div class="bg-blue-50 rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
-            <img src="img/crud_alumni-postgress.png" alt="CRUD Alumni PostgreSQL" class="w-full h-40 object-cover" />
-            <div class="p-4">
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/wikusama.png" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">Wikusama Hotel</h3>
+
+              <p class="text-xs text-blue-600 mt-1">PHP Native • MySQL • HTML • CSS</p>
+
+              <p class="text-sm mt-3 text-gray-600">
+                Hotel booking web application developed using native PHP and MySQL as part of a final examination project. The system allows users to browse rooms, make reservations, and manage booking data.
+              </p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Room booking management</li>
+                <li>Customer reservation system</li>
+                <li>Database integration with MySQL</li>
+              </ul>
+
+              <a href="https://github.com/nerhays/wikusamahotel" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/librahub.jpeg" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">LibraHub</h3>
+
+              <p class="text-xs text-blue-600 mt-1">Flutter • Firebase</p>
+
+              <p class="text-sm mt-3 text-gray-600">Mobile library management application built using Flutter and Firebase with authentication and real-time database integration.</p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>User authentication</li>
+                <li>Book borrowing management</li>
+                <li>Realtime Firebase database</li>
+              </ul>
+
+              <a href="https://github.com/nerhays/LibraHub" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/tokoroti.jpeg" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">TokoRoti</h3>
+
+              <p class="text-xs text-blue-600 mt-1">Flutter • Firebase • Geolocation</p>
+
+              <p class="text-sm mt-3 text-gray-600">Mobile ordering application developed using Flutter and Firebase with geolocation-based delivery tracking and real-time order management.</p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Geolocation delivery system</li>
+                <li>Firebase authentication</li>
+                <li>Realtime order tracking</li>
+              </ul>
+
+              <a href="https://github.com/nerhays/TokoRoti" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/daha.png" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">Daha Borepile Landing Page</h3>
+
+              <p class="text-xs text-blue-600 mt-1">HTML • CSS • JavaScript • Responsive</p>
+
+              <p class="text-sm mt-3 text-gray-600">Company profile landing page developed to showcase services and project portfolios of Daha Borepile with responsive design and modern UI layout.</p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Responsive website design</li>
+                <li>Service and portfolio showcase</li>
+                <li>Modern landing page layout</li>
+              </ul>
+
+              <a href="https://nerhays.github.io/daha-web-v2/" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded"> Live Demo </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/litera.png" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">Litera</h3>
+
+              <p class="text-xs text-blue-600 mt-1">HTML • CSS • JavaScript</p>
+
+              <p class="text-sm mt-3 text-gray-600">Online book shopping website developed using vanilla JavaScript with dummy data managed through JavaScript objects.</p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Product catalog system</li>
+                <li>Shopping cart interface</li>
+                <li>Client-side data management</li>
+              </ul>
+
+              <a href="https://litera-belanjabukuonline.vercel.app/" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded"> Live Demo </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/laravel.png" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">Laravel Library System</h3>
+
+              <p class="text-xs text-blue-600 mt-1">Laravel • PHP • MySQL</p>
+
+              <p class="text-sm mt-3 text-gray-600">Web-based library management system implementing CRUD operations using Laravel framework and MySQL database.</p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Book management CRUD</li>
+                <li>Database management</li>
+                <li>Laravel MVC architecture</li>
+              </ul>
+
+              <a href="https://github.com/nerhays/perpustakaanlaravel" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/crud_alumni_mongo.png" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">CRUD Alumni API (MongoDB)</h3>
+
+              <p class="text-xs text-blue-600 mt-1">Golang • MongoDB • REST API</p>
+
+              <p class="text-sm mt-3 text-gray-600">Backend REST API for alumni data management built using Golang and MongoDB implementing repository pattern and clean architecture.</p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>REST API development</li>
+                <li>MongoDB database integration</li>
+                <li>Clean architecture pattern</li>
+              </ul>
+
+              <a href="https://github.com/nerhays/crud_alumni_mongodb" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/crud_alumni-postgress.png" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
               <h3 class="text-xl font-semibold text-blue-700">CRUD Alumni API (PostgreSQL)</h3>
 
-              <p class="text-xs text-blue-600 font-medium mt-1">Golang • PostgreSQL • REST API • SQL</p>
+              <p class="text-xs text-blue-600 mt-1">Golang • PostgreSQL • REST API</p>
 
-              <p class="text-sm mt-2 text-gray-600 text-justify">Backend REST API project developed using Golang and PostgreSQL to manage alumni data. Focused on relational database design, SQL queries, and RESTful API implementation.</p>
+              <p class="text-sm mt-3 text-gray-600">Backend REST API project developed using Golang and PostgreSQL focusing on relational database design and RESTful API implementation.</p>
 
-              <div class="flex gap-3 mt-4 justify-center">
-                <a href="https://github.com/nerhays/crud_alumni_postgressql" target="_blank" class="flex items-center gap-1 px-3 py-1 text-sm bg-gray-800 text-white rounded hover:bg-gray-900"> <i class="fab fa-github"></i> GitHub </a>
-              </div>
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>REST API development</li>
+                <li>PostgreSQL database design</li>
+                <li>SQL query optimization</li>
+              </ul>
+
+              <a href="https://github.com/nerhays/crud_alumni_postgressql" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-blue-700 text-white py-10">
-      <div id="contact" class="container mx-auto px-6 text-center">
-        <h2 class="text-2xl font-bold mb-6">Contact</h2>
-        <div class="flex justify-center space-x-10 mb-6">
-          <a href="https://github.com/nerhays" target="_blank">
-            <i class="fab fa-github text-3xl"></i>
-          </a>
-          <a href="https://linkedin.com/in/syahren-maulana-adil-hakim-69b824239/" target="_blank">
-            <i class="fab fa-linkedin text-3xl"></i>
-          </a>
+    <section id="experience" class="py-20 bg-blue-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-blue-700 text-center mb-12">Experience</h2>
+
+        <div class="relative max-w-3xl mx-auto">
+          <div class="absolute left-4 top-0 h-full w-1 bg-blue-300"></div>
+
+          <div class="relative pl-12 mb-10">
+            <div class="absolute left-0 w-8 h-8 bg-blue-600 rounded-full border-4 border-white"></div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-xl font-semibold text-blue-700">Software Developer Intern</h3>
+
+              <p class="text-sm text-gray-500 mb-2">PT Pelindo Terminal Petikemas • Januari 2026</p>
+
+              <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
+                <li>Developed internal web application <b>PINTRA</b> for employee loan management.</li>
+                <li>Built frontend using <b>React + Vite</b>.</li>
+                <li>Integrated system with <b>Google Apps Script API</b>.</li>
+                <li>Implemented request workflow and approval dashboard.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="relative pl-12 mb-10">
+            <div class="absolute left-0 w-8 h-8 bg-blue-600 rounded-full border-4 border-white"></div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-xl font-semibold text-blue-700">Customer Service</h3>
+
+              <p class="text-sm text-gray-500 mb-2">PT Panal Kreasi Nusantara • Oct 2022 – Dec 2022</p>
+
+              <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
+                <li>Provided technical and product support to customers.</li>
+                <li>Handled issue reporting, escalation, and resolution.</li>
+                <li>Ensured smooth operational workflow for client systems.</li>
+                <li>Strengthened communication and problem-solving skills.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="relative pl-12 mb-10">
+            <div class="absolute left-0 w-8 h-8 bg-blue-600 rounded-full border-4 border-white"></div>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-xl font-semibold text-blue-700">Software Development</h3>
+
+              <p class="text-sm text-gray-500 mb-2">PT Panal Kreasi Nusantara • Jun 2022 – Sep 2022</p>
+
+              <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
+                <li>Developed automation system for uploading products to multiple marketplaces.</li>
+                <li>Built application using <b>Visual Basic (VB)</b>.</li>
+                <li>Reduced manual workload and improved operational efficiency.</li>
+                <li>Collaborated with internal teams during development and testing.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <p class="text-sm">&copy; 2025 nrhys</p>
       </div>
+    </section>
+
+    <footer id="contact" class="bg-blue-700 text-white py-12 text-center">
+      <h2 class="text-2xl font-bold mb-6">Contact</h2>
+
+      <div class="flex justify-center gap-8 text-3xl mb-6">
+        <a href="https://github.com/nerhays"><i class="fab fa-github"></i></a>
+
+        <a href="https://linkedin.com/in/syahren-maulana-adil-hakim-69b824239/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+
+      <p>Email : syahrenzgaming@gmail.com</p>
+
+      <p class="mt-4 text-sm">© 2026 Syahren Maulana</p>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
-      AOS.init({ duration: 1000, once: true });
-    </script>
-    <script>
-      const btn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-      btn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+      AOS.init({
+        duration: 1000,
+        once: true,
       });
     </script>
   </body>
