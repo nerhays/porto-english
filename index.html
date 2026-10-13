@@ -15,16 +15,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <style>
-      html {
-        scroll-behavior: smooth;
+      html { scroll-behavior: smooth; }
+      section, footer { scroll-margin-top: 80px; }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        [data-aos] { opacity: 1 !important; transform: none !important; }
       }
+      a:focus-visible, button:focus-visible { outline: 3px solid #facc15; outline-offset: 4px; }
+
     </style>
   </head>
 
   <body class="font-sans text-gray-800">
     <nav class="bg-blue-600 text-white fixed w-full z-50 shadow-md">
       <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold">Syahren</h1>
+        <a href="#home" class="text-xl font-bold" aria-label="Syahren — home">Syahren</a>
+        <button id="menu-toggle" type="button" class="md:hidden border border-white rounded px-3 py-2" aria-controls="mobile-menu" aria-expanded="false">Menu</button>
 
         <ul class="hidden md:flex space-x-6">
           <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
@@ -35,16 +41,24 @@
           <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
         </ul>
       </div>
+      <ul id="mobile-menu" class="md:hidden px-6 pb-4 space-y-3" hidden>
+        <li><a href="#home" class="block">Home</a></li>
+        <li><a href="#about" class="block">About</a></li>
+        <li><a href="#skills" class="block">Skills</a></li>
+        <li><a href="#projects" class="block">Projects</a></li>
+        <li><a href="#experience" class="block">Experience</a></li>
+        <li><a href="#contact" class="block">Contact</a></li>
+      </ul>
     </nav>
 
-    <section id="home" class="h-screen flex flex-col justify-center items-center text-center bg-blue-600 text-white">
-      <img src="img/fotoku.jpeg" class="w-40 h-40 rounded-full border-4 border-white shadow-lg mb-6" />
+    <section id="home" class="min-h-screen px-6 pt-28 pb-16 flex flex-col justify-center items-center text-center bg-blue-600 text-white">
+      <img src="img/fotoku.jpeg" alt="Syahren Maulana" decoding="async" fetchpriority="high" class="w-40 h-40 rounded-full border-4 border-white shadow-lg mb-6" />
 
       <h1 class="text-4xl md:text-5xl font-bold" data-aos="fade-up">Hi, I'm Syahren Maulana</h1>
 
-      <p class="mt-4 text-lg text-blue-100" data-aos="fade-up" data-aos-delay="200">Fullstack & Mobile Developer</p>
+      <p class="mt-4 text-lg text-blue-100" data-aos="fade-up" data-aos-delay="200">Fullstack & Mobile Developer · Informatics Engineering Student</p>
 
-      <p class="mt-3 max-w-xl text-blue-200">Informatics Engineering student at Universitas Airlangga with experience building web and mobile applications using Flutter, Golang, Laravel, and modern frontend technologies.</p>
+      <p class="mt-3 max-w-xl text-blue-200">I build web and mobile applications with React, Express.js, Golang, Laravel, and Flutter, with hands-on experience in REST APIs, database integration, and maintaining existing systems.</p>
 
       <div class="flex gap-4 mt-6">
         <a href="https://github.com/nerhays" class="bg-white text-blue-600 px-5 py-2 rounded-lg font-semibold hover:bg-gray-200"> GitHub </a>
@@ -58,10 +72,7 @@
         <h2 class="text-3xl font-bold text-blue-700 mb-6">About Me</h2>
 
         <p class="max-w-2xl mx-auto text-gray-600 text-justify">
-          I am an Informatics Engineering student at Universitas Airlangga with strong interest in fullstack and mobile application development. I have experience developing web and mobile applications using Flutter, HTML, CSS, JavaScript,
-          Laravel, Golang, React Vite, and Firebase. Through academic and personal projects, I have built systems such as mobile applications, REST APIs, and responsive web platforms. These experiences strengthened my problem solving
-          skills, system design understanding, and teamwork collaboration. Currently I am seeking internship opportunities as a Fullstack Developer, Mobile Developer, or Backend Developer where I can contribute to real-world software
-          development projects.
+          I am an Informatics Engineering student at Universitas Airlangga with hands-on experience in fullstack web development, mobile applications, and backend systems. I work with React, Express.js, Golang, Laravel, and Flutter to build application features, develop RESTful APIs, and integrate databases. During my internship at Pelindo, I developed PINTRA, an internal application for facility and vehicle loan requests. At Balai K3 Surabaya, I am developing a certificate issuance feature and maintaining an existing web application through debugging and feature improvements. These experiences have strengthened my problem-solving skills and my ability to turn operational requirements into practical software solutions. I am eager to contribute these skills to a software development team and support digital transformation initiatives.
         </p>
       </div>
     </section>
@@ -85,7 +96,11 @@
           </div>
           <div class="bg-white shadow p-6 rounded-lg">
             <i class="fab fa-react text-3xl text-cyan-500 mb-2"></i>
-            <p class="font-semibold">React + Vite</p>
+            <p class="font-semibold">React</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-bolt text-3xl text-purple-600 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">Vite</p>
           </div>
           <div class="bg-white shadow p-6 rounded-lg">
             <i class="fas fa-wind text-3xl text-sky-500 mb-2"></i>
@@ -106,6 +121,10 @@
           <div class="bg-white shadow p-6 rounded-lg">
             <i class="fas fa-mobile-alt text-3xl text-blue-500 mb-2"></i>
             <p class="font-semibold">Flutter</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-code text-3xl text-blue-600 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">Dart</p>
           </div>
           <div class="bg-white shadow p-6 rounded-lg">
             <i class="fas fa-code text-3xl text-purple-600 mb-2"></i>
@@ -135,7 +154,48 @@
             <i class="fab fa-github text-3xl text-black mb-2"></i>
             <p class="font-semibold">GitHub</p>
           </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-node-js text-3xl text-green-600 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">Node.js</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-server text-3xl text-gray-700 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">Express.js</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-code text-3xl text-gray-800 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">Next.js</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-code text-3xl text-blue-600 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">TypeScript</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-fire text-3xl text-orange-600 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">CodeIgniter 4</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-bootstrap text-3xl text-purple-600 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">Bootstrap</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fab fa-java text-3xl text-red-600 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">Java</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-code text-3xl text-indigo-600 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">Visual Basic</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-exchange-alt text-3xl text-blue-600 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">REST API</p>
+          </div>
+          <div class="bg-white shadow p-6 rounded-lg">
+            <i class="fas fa-paper-plane text-3xl text-orange-500 mb-2" aria-hidden="true"></i>
+            <p class="font-semibold">Postman</p>
+          </div>
         </div>
+
       </div>
     </section>
 
@@ -143,22 +203,23 @@
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold text-blue-700 mb-10">Projects</h2>
 
+        <p class="max-w-2xl mx-auto text-gray-600 mb-8">Selected work across internal business systems, mobile applications, and public websites. Featured projects appear first.</p>
         <div class="grid md:grid-cols-3 gap-8">
           <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/pintra.png" class="w-full h-40 object-cover" />
+            <img src="img/pintra-optimized.jpg" alt="PINTRA facility and vehicle loan application" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
 
             <div class="p-5">
-              <h3 class="text-xl font-semibold text-blue-700">PINTRA (Pelindo Internal Loan System)</h3>
+              <h3 class="text-xl font-semibold text-blue-700">PINTRA (Facility & Vehicle Loan System)</h3>
 
               <p class="text-xs text-blue-600 mt-1">React • Vite • Express.js • Internal System</p>
 
               <p class="text-sm mt-3 text-gray-600">
-                Internal web application developed during internship at Pelindo to manage employee loan requests and approval workflows. Built using React and Vite with integration to Express.js for backend processing and internal data
+                Internal web application developed during internship at Pelindo to manage facility and vehicle loan requests and approval workflows. Built using React and Vite with integration to Express.js for backend processing and internal data
                 management.
               </p>
 
               <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
-                <li>Employee loan request management</li>
+                <li>Facility and vehicle loan request management</li>
                 <li>Approval workflow system</li>
                 <li>Integration with Express.js</li>
               </ul>
@@ -167,7 +228,113 @@
           </div>
 
           <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/wikusama.png" class="w-full h-40 object-cover" />
+            <img src="img/swkfinder.jpeg" alt="SWK Finder mobile application" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">SWK Finder</h3>
+
+              <p class="text-xs text-blue-600 mt-1">Flutter • Node.js • Express.js • MongoDB • OpenStreetMap</p>
+
+              <p class="text-sm mt-3 text-gray-600">
+                Mobile-based directory application that helps users discover Surabaya Food Courts (SWK) using interactive maps, category filtering, and location-based search. Developed as a university project with a RESTful API backend.
+              </p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Interactive map with OpenStreetMap</li>
+                <li>Category filtering and location search</li>
+                <li>REST API integration with MongoDB</li>
+              </ul>
+
+              <a href="https://github.com/nerhays/swk_finder" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/dahav3-optimized.jpg" alt="Daha Borepile company profile website" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">Daha Borepile Company Profile</h3>
+
+              <p class="text-xs text-blue-600 mt-1">Next.js • React • TypeScript • Tailwind CSS</p>
+
+              <p class="text-sm mt-3 text-gray-600">
+                Modern SEO-optimized company profile website for a bore pile contractor. Built with Next.js and Tailwind CSS to improve performance, responsiveness, and search engine visibility while showcasing company services and
+                projects.
+              </p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Responsive modern landing page</li>
+                <li>SEO-friendly architecture with Next.js</li>
+                <li>Service, project, and client showcase</li>
+              </ul>
+
+              <a href="https://dahaborepile.com" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded"> Live Demo </a>
+              <a href="https://github.com/nerhays/daha-v3" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/librahub.jpeg" alt="LibraHub mobile library application" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">LibraHub</h3>
+
+              <p class="text-xs text-blue-600 mt-1">Flutter • Firebase</p>
+
+              <p class="text-sm mt-3 text-gray-600">Mobile library management application built using Flutter and Firebase with authentication and real-time database integration.</p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>User authentication</li>
+                <li>Book borrowing management</li>
+                <li>Realtime Firebase database</li>
+              </ul>
+
+              <a href="https://github.com/nerhays/LibraHub" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/tokoroti.jpeg" alt="TokoRoti mobile ordering application" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">TokoRoti</h3>
+
+              <p class="text-xs text-blue-600 mt-1">Flutter • Firebase • Geolocation</p>
+
+              <p class="text-sm mt-3 text-gray-600">Mobile ordering application developed using Flutter and Firebase with geolocation-based delivery tracking and real-time order management.</p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Geolocation delivery system</li>
+                <li>Firebase authentication</li>
+                <li>Realtime order tracking</li>
+              </ul>
+
+              <a href="https://github.com/nerhays/TokoRoti" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/litera-optimized.jpg" alt="Litera online book shopping website" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
+
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-blue-700">Litera</h3>
+
+              <p class="text-xs text-blue-600 mt-1">HTML • CSS • JavaScript</p>
+
+              <p class="text-sm mt-3 text-gray-600">Online book shopping website developed using vanilla JavaScript with dummy data managed through JavaScript objects.</p>
+
+              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
+                <li>Product catalog system</li>
+                <li>Shopping cart interface</li>
+                <li>Client-side data management</li>
+              </ul>
+
+              <a href="https://litera-belanjabukuonline.vercel.app/" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded"> Live Demo </a>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
+            <img src="img/wikusama-optimized.jpg" alt="Wikusama Hotel booking application" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
 
             <div class="p-5">
               <h3 class="text-xl font-semibold text-blue-700">Wikusama Hotel</h3>
@@ -189,87 +356,7 @@
           </div>
 
           <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/librahub.jpeg" class="w-full h-40 object-cover" />
-
-            <div class="p-5">
-              <h3 class="text-xl font-semibold text-blue-700">LibraHub</h3>
-
-              <p class="text-xs text-blue-600 mt-1">Flutter • Firebase</p>
-
-              <p class="text-sm mt-3 text-gray-600">Mobile library management application built using Flutter and Firebase with authentication and real-time database integration.</p>
-
-              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
-                <li>User authentication</li>
-                <li>Book borrowing management</li>
-                <li>Realtime Firebase database</li>
-              </ul>
-
-              <a href="https://github.com/nerhays/LibraHub" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/tokoroti.jpeg" class="w-full h-40 object-cover" />
-
-            <div class="p-5">
-              <h3 class="text-xl font-semibold text-blue-700">TokoRoti</h3>
-
-              <p class="text-xs text-blue-600 mt-1">Flutter • Firebase • Geolocation</p>
-
-              <p class="text-sm mt-3 text-gray-600">Mobile ordering application developed using Flutter and Firebase with geolocation-based delivery tracking and real-time order management.</p>
-
-              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
-                <li>Geolocation delivery system</li>
-                <li>Firebase authentication</li>
-                <li>Realtime order tracking</li>
-              </ul>
-
-              <a href="https://github.com/nerhays/TokoRoti" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/daha.png" class="w-full h-40 object-cover" />
-
-            <div class="p-5">
-              <h3 class="text-xl font-semibold text-blue-700">Daha Borepile Landing Page</h3>
-
-              <p class="text-xs text-blue-600 mt-1">HTML • CSS • JavaScript • Responsive</p>
-
-              <p class="text-sm mt-3 text-gray-600">Company profile landing page developed to showcase services and project portfolios of Daha Borepile with responsive design and modern UI layout.</p>
-
-              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
-                <li>Responsive website design</li>
-                <li>Service and portfolio showcase</li>
-                <li>Modern landing page layout</li>
-              </ul>
-
-              <a href="https://nerhays.github.io/daha-web-v2/" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded"> Live Demo </a>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/litera.png" class="w-full h-40 object-cover" />
-
-            <div class="p-5">
-              <h3 class="text-xl font-semibold text-blue-700">Litera</h3>
-
-              <p class="text-xs text-blue-600 mt-1">HTML • CSS • JavaScript</p>
-
-              <p class="text-sm mt-3 text-gray-600">Online book shopping website developed using vanilla JavaScript with dummy data managed through JavaScript objects.</p>
-
-              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
-                <li>Product catalog system</li>
-                <li>Shopping cart interface</li>
-                <li>Client-side data management</li>
-              </ul>
-
-              <a href="https://litera-belanjabukuonline.vercel.app/" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded"> Live Demo </a>
-            </div>
-          </div>
-
-          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/laravel.png" class="w-full h-40 object-cover" />
+            <img src="img/laravel-optimized.jpg" alt="Laravel library management system" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
 
             <div class="p-5">
               <h3 class="text-xl font-semibold text-blue-700">Laravel Library System</h3>
@@ -289,7 +376,7 @@
           </div>
 
           <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/crud_alumni_mongo.png" class="w-full h-40 object-cover" />
+            <img src="img/crud_alumni_mongo.png" alt="Alumni API with MongoDB" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
 
             <div class="p-5">
               <h3 class="text-xl font-semibold text-blue-700">CRUD Alumni API (MongoDB)</h3>
@@ -309,7 +396,7 @@
           </div>
 
           <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/crud_alumni-postgress.png" class="w-full h-40 object-cover" />
+            <img src="img/crud_alumni-postgress-optimized.jpg" alt="Alumni API with PostgreSQL" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
 
             <div class="p-5">
               <h3 class="text-xl font-semibold text-blue-700">CRUD Alumni API (PostgreSQL)</h3>
@@ -327,29 +414,9 @@
               <a href="https://github.com/nerhays/crud_alumni_postgressql" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
             </div>
           </div>
+
           <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/swkfinder.jpeg" class="w-full h-40 object-cover" />
-
-            <div class="p-5">
-              <h3 class="text-xl font-semibold text-blue-700">SWK Finder</h3>
-
-              <p class="text-xs text-blue-600 mt-1">Flutter • Node.js • Express.js • MongoDB • OpenStreetMap</p>
-
-              <p class="text-sm mt-3 text-gray-600">
-                Mobile-based directory application that helps users discover Surabaya Food Courts (SWK) using interactive maps, category filtering, and location-based search. Developed as a university project with a RESTful API backend.
-              </p>
-
-              <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
-                <li>Interactive map with OpenStreetMap</li>
-                <li>Category filtering and location search</li>
-                <li>REST API integration with MongoDB</li>
-              </ul>
-
-              <a href="https://github.com/nerhays/swk_finder" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
-            </div>
-          </div>
-          <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/marketplace.png" class="w-full h-40 object-cover" />
+            <img src="img/marketplace-optimized.jpg" alt="Marketplace management system" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
 
             <div class="p-5">
               <h3 class="text-xl font-semibold text-blue-700">Marketplace Management System</h3>
@@ -357,7 +424,7 @@
               <p class="text-xs text-blue-600 mt-1">CodeIgniter 4 • MySQL • Bootstrap • PHP</p>
 
               <p class="text-sm mt-3 text-gray-600">
-                Marketplace web application built using CodeIgniter 4 with authentication, role-based access control, and product management features. Developed as a competency assessment project for sertification.
+                Marketplace web application built using CodeIgniter 4 with authentication, role-based access control, and product management features. Developed as a competency assessment project for certification.
               </p>
 
               <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
@@ -369,27 +436,24 @@
               <a href="https://github.com/nerhays/marketplace" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
             </div>
           </div>
+
           <div class="bg-blue-50 shadow rounded-lg overflow-hidden">
-            <img src="img/dahav3.png" class="w-full h-40 object-cover" />
+            <img src="img/daha-optimized.jpg" alt="Daha Borepile landing page" loading="lazy" decoding="async" class="w-full h-40 object-cover" />
 
             <div class="p-5">
-              <h3 class="text-xl font-semibold text-blue-700">Daha Borepile Company Profile</h3>
+              <h3 class="text-xl font-semibold text-blue-700">Daha Borepile Landing Page</h3>
 
-              <p class="text-xs text-blue-600 mt-1">Next.js • React • TypeScript • Tailwind CSS</p>
+              <p class="text-xs text-blue-600 mt-1">HTML • CSS • JavaScript • Responsive</p>
 
-              <p class="text-sm mt-3 text-gray-600">
-                Modern SEO-optimized company profile website for a bore pile contractor. Built with Next.js and Tailwind CSS to improve performance, responsiveness, and search engine visibility while showcasing company services and
-                projects.
-              </p>
+              <p class="text-sm mt-3 text-gray-600">Company profile landing page developed to showcase services and project portfolios of Daha Borepile with responsive design and modern UI layout.</p>
 
               <ul class="text-xs text-gray-500 mt-2 text-left list-disc pl-4">
-                <li>Responsive modern landing page</li>
-                <li>SEO-friendly architecture with Next.js</li>
-                <li>Service, project, and client showcase</li>
+                <li>Responsive website design</li>
+                <li>Service and portfolio showcase</li>
+                <li>Modern landing page layout</li>
               </ul>
 
-              <a href="https://dahaborepile.com" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded"> Live Demo </a>
-              <a href="https://github.com/nerhays/daha-v3" class="inline-block mt-4 bg-gray-800 text-white px-4 py-2 rounded"> GitHub </a>
+              <a href="https://nerhays.github.io/daha-web-v2/" class="inline-block mt-4 bg-blue-600 text-white px-4 py-2 rounded"> Live Demo </a>
             </div>
           </div>
         </div>
@@ -416,17 +480,28 @@
 
           <div class="relative pl-12 mb-10">
             <div class="absolute left-0 w-8 h-8 bg-blue-600 rounded-full border-4 border-white"></div>
+            <div class="bg-white p-6 rounded-lg shadow">
+              <h3 class="text-xl font-semibold text-blue-700">Web Developer Intern</h3>
+              <p class="text-sm text-gray-500 mb-2">Balai K3 Surabaya • Sep 2026 – Nov 2026</p>
+              <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
+                <li>Developing a certificate issuance feature within an existing web application to support administrative document processing.</li>
+                <li>Identifying, troubleshooting, and resolving bugs to improve application functionality and reliability.</li>
+                <li>Maintaining and enhancing application features based on operational requirements.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="relative pl-12 mb-10">
+            <div class="absolute left-0 w-8 h-8 bg-blue-600 rounded-full border-4 border-white"></div>
 
             <div class="bg-white p-6 rounded-lg shadow">
               <h3 class="text-xl font-semibold text-blue-700">Software Developer Intern</h3>
 
-              <p class="text-sm text-gray-500 mb-2">PT Pelindo Sub Regional 3 • Januari 2026</p>
+              <p class="text-sm text-gray-500 mb-2">PT Pelindo Sub Regional 3 • Jan 2026</p>
 
               <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
-                <li>Developed internal web application <b>PINTRA</b> for employee loan management.</li>
-                <li>Built frontend using <b>React + Vite</b>.</li>
-                <li>Integrated system with <b>Express.js</b>.</li>
-                <li>Implemented request workflow and approval dashboard.</li>
+                <li>Developed <b>PINTRA</b>, an internal web application for facility and vehicle loan requests using <b>React, Vite, and Express.js</b>.</li>
+                <li>Developed and integrated <b>RESTful APIs</b> to connect frontend and backend systems.</li>
+                <li>Collaborated with internal stakeholders to translate business requirements into functional application features.</li>
               </ul>
             </div>
           </div>
@@ -439,10 +514,8 @@
               <p class="text-sm text-gray-500 mb-2">PT Panal Kreasi Nusantara • Oct 2022 – Dec 2022</p>
 
               <ul class="text-sm text-gray-600 list-disc pl-5 space-y-1">
-                <li>Provided technical and product support to customers.</li>
-                <li>Handled issue reporting, escalation, and resolution.</li>
-                <li>Ensured smooth operational workflow for client systems.</li>
-                <li>Strengthened communication and problem-solving skills.</li>
+                <li>Provided technical and product-related support to clients.</li>
+                <li>Handled issue reporting, escalation, and resolution to ensure smooth daily operations.</li>
               </ul>
             </div>
           </div>
@@ -471,14 +544,14 @@
       <h2 class="text-2xl font-bold mb-6">Contact</h2>
 
       <div class="flex justify-center gap-8 text-3xl mb-6">
-        <a href="https://github.com/nerhays"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/nerhays" aria-label="GitHub profile"><i class="fab fa-github"></i></a>
 
-        <a href="https://linkedin.com/in/syahren-maulana-adil-hakim-69b824239/">
+        <a href="https://linkedin.com/in/syahren-maulana-adil-hakim-69b824239/" aria-label="LinkedIn profile">
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
 
-      <p>Email : syahrenzgaming@gmail.com</p>
+      <p><a href="mailto:syahrenmaulana168@gmail.com" class="underline underline-offset-4">syahrenmaulana168@gmail.com</a></p>
 
       <p class="mt-4 text-sm">© 2026 Syahren Maulana</p>
     </footer>
@@ -486,10 +559,28 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      function closeMenu() {
+        mobileMenu.hidden = true;
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.hidden = !mobileMenu.hidden;
+        menuToggle.setAttribute("aria-expanded", String(!mobileMenu.hidden));
       });
+      mobileMenu.addEventListener("click", (event) => {
+        if (event.target.closest("a")) closeMenu();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !mobileMenu.hidden) {
+          closeMenu();
+          menuToggle.focus();
+        }
+      });
+      if (window.AOS) {
+        AOS.init({ duration: 1000, once: true, disable: () => window.matchMedia("(prefers-reduced-motion: reduce)").matches });
+      }
     </script>
   </body>
 </html>
